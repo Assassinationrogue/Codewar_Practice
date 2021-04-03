@@ -1,6 +1,7 @@
 const names = [ {name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'} ]
 function list(names){
     let counting = [];
+    
     // for the converstion of array of object into an array
     for (let num=0;num < names.length; num++){
         counting.push(names[num].name);        
