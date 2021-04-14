@@ -1,25 +1,29 @@
-word = 'ixigo'
-word_dummy = []
-counter = 0
-# just appending into the list
-dummy_length = len(word_dummy)
-word_dummyX = [word_dummy.append(word[i]) for i in range (len(word))]
-while len(word_dummy) > 1:
-    # to avoid duplication in check
-    print(len(word_dummy))
-    print(word_dummy[0])
-    word_dummy.reverse()
-    word_dummy.pop()
-    word_dummy.reverse()
-    counter+= 1 
-    # count the word's length for a number
-    wrd_length = len(word)
-    print(word_dummy)
+alphabets=[]
+broken_word = []
+word = 'Miami'
+def popper(list):
+    list.reverse()
+    list.pop()
+    list.reverse()
 
-    for currNum in range(wrd_length):
-#             #print(word[currNum])
-        print(word[currNum], word_dummy[0])
-#         print(word_dummy)
-    
-# except: 
-#     pass
+count = len(word)
+for i in range(count):
+    alphabets.append(word[i])
+    broken_word.append(word[i])
+   
+# there will be two list
+# first list will be checker
+# second list for being checked
+# first letter will always get popped from second list
+# after checking the first letter of first list will be popped 
+# while loop will keep track of the counter
+
+while len(broken_word) >= 1:
+    try:
+        popper(broken_word)
+        for i in range (len(alphabets)):
+            print(broken_word[0],alphabets[0])
+        popper(alphabets)
+
+    except:
+        pass
