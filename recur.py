@@ -6,4 +6,4 @@ def sum_of_digit(n):
 
         return int(n%10) + sum_of_digit(int(n/10))
 
-print(sum_of_digit(123))
+print(sum_of_digit(942))
