@@ -1,11 +1,7 @@
 function orderWeight(strng){
-    let newOrd = strng.split(" ");
-    let numArr = []
-    let numOrdArr=[]
-    let obj1 = {}
-    for (let keyNum = 0; keyNum < newOrd.length; keyNum++){
-    numArr.push(parseInt(newOrd[keyNum])) // str to int
-    }
+    let numArr = strng.split(" ").map(Number);
+    let numOrdArr=[];
+    let obj1 = {};
     for (let currNum =0; currNum < numArr.length; currNum++){
         numOrdArr.push(digitSum(numArr[currNum]))
     } numOrdArr.sort((a,b)=>{
